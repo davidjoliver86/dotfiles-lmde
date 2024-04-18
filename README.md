@@ -1,4 +1,4 @@
-# dotfiles-debian
+# dotfiles-lmde
 Ansible setup for LMDE 6.
 
 ## Instructions
