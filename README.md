@@ -12,3 +12,8 @@ Ansible setup for LMDE 6.
 | Terminal background | #111111 |
 | Terminal color scheme | GNOME |
 | Terminal command | /usr/bin/fish |
+
+# TODO
+* Generate hosts file on-the-fly.
+* Remove unused files.
+* Maybe refine fish config?
