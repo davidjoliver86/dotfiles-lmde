@@ -3,7 +3,7 @@ Ansible setup for LMDE 6.
 
 ## Instructions
 1. Run `bootstrap.sh.`
-2. Run `run.sh roles-*`. Rit as needed to target specific role files.
+2. Run `run.sh roles-*`. Fit as needed to target specific role files.
 
 ## Other setup items of note
 | Item | Value |
