@@ -1,0 +1,11 @@
+---
+- name: install awscli
+  become: true
+  command:
+    cmd: "{{ ansible_env.PWD }}/roles/awscli/scripts/install_awscli.sh"
+    creates: /usr/local/bin/aws
+
+- name: aws fish autocomplete
+  copy:
+    src: ../files/aws-completion.fish
+    dest: ~/.config/fish/conf.d/aws-completion.fish

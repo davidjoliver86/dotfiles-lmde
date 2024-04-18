@@ -1,0 +1,38 @@
+{
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 13,
+    "editor.formatOnSave": true,
+    "editor.lineHeight": 16,
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.terraform": true,
+        "**/.tox": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.terraform/**": true,
+        "**/.terraform": true,
+        "**/.tox/**": true,
+        "**/.tox": true
+    },
+    "security.workspace.trust.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.fontSize": 13,
+    "typescript.surveys.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+    "workbench.commandPalette.history": 0,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.useSplitJSON": true,
+    "workbench.startupEditor": "newUntitledFile"
+}

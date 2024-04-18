@@ -1,0 +1,32 @@
+---
+  - name: install pyenv deps
+    become: true
+    apt:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - build-essential
+      - libssl-dev
+      - zlib1g-dev
+      - libbz2-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - curl
+      - libncursesw5-dev
+      - xz-utils
+      - tk-dev
+      - libxml2-dev
+      - libxmlsec1-dev
+      - libffi-dev
+      - liblzma-dev
+
+  - name: checkout pyenv repo
+    ansible.builtin.git:
+      repo: https://github.com/pyenv/pyenv
+      dest: ~/.pyenv
+      update: no
+
+  - name: pyenv shell bindings
+    copy:
+      src: ../files/pyenv.fish
+      dest: ~/.config/fish/conf.d/pyenv.fish

@@ -1,0 +1,25 @@
+---
+  - name: vscode apt key
+    become: true
+    shell:
+      cmd: curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o /etc/apt/keyrings/vscode-archive-keyring.pgp
+      creates: /etc/apt/keyrings/vscode-archive-keyring.pgp
+
+  - name: vscode apt repo
+    become: true
+    ansible.builtin.apt_repository:
+      repo: deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/vscode-archive-keyring.pgp] https://packages.microsoft.com/repos/code stable main
+      state: present
+      filename: vscode
+
+  - name: install vscode
+    become: true
+    apt:
+      name: code
+      update_cache: true
+
+  - name: install vscode settings
+    copy:
+      src: ../files/
+      dest: ~/.config/Code/User/
+      mode: "0644"

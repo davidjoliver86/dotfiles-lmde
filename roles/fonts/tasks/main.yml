@@ -1,0 +1,13 @@
+---
+  - name: install hack fonts
+    become: true
+    apt:
+      name: fonts-hack
+
+  - name: update font cache
+    command:
+      cmd: fc-cache -rf
+
+  - name: set hack as default monospace font
+    command:
+      cmd: gsettings set org.gnome.desktop.interface monospace-font-name "Hack 10"

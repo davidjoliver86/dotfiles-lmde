@@ -1,0 +1,9 @@
+- name: setup gui roles
+  hosts: localhost
+  roles:
+    - fonts
+    - vscode
+    - flatpak/base
+    - flatpak/joplin
+    - flatpak/slack
+    - flatpak/zoom

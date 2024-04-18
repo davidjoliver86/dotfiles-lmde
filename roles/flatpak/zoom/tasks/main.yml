@@ -1,0 +1,6 @@
+---
+  - name: install zoom flatpak
+    community.general.flatpak:
+      name: us.zoom.Zoom
+      state: present
+      method: user
