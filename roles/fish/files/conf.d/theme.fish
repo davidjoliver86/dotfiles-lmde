@@ -1,21 +1,3 @@
-# vi key bindings
-fish_vi_key_bindings
-
-# let theme handle virtualenvs
-set -xg VIRTUAL_ENV_DISABLE_PROMPT 1
-
-# editor
-set -xg EDITOR vim
-
-# timezone
-set -g theme_date_timezone America/Los_Angeles
-
-# fish greeting
-function fish_greeting
-end
-
-# no blinking cursor
-set fish_cursor_unknown block
 
 # theme
 set -U fish_color_normal normal
@@ -55,6 +37,3 @@ set -U fish_color_keyword
 set -U fish_pager_color_selected_description
 set -U fish_color_option
 set -U fish_pager_color_secondary_completion
-
-# starship
-starship init fish | source

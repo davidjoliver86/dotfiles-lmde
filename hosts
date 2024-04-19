@@ -1,6 +1,0 @@
-[local]
-localhost ansible_connection=local ansible_python_interpreter=/usr/lib/virtualenvs/ansible/bin/python
-
-[local:vars]
-username=davido
-debian_codename=bookworm

@@ -1,13 +1,13 @@
 ---
+  - name: install fish
+    become: true
+    apt:
+      name: fish
+
   - name: install fish configs
     copy:
-      src: ../files/
-      dest: ~/.config/fish/
-
-  - name: ensure ~/.local/bin exists
-    ansible.builtin.file:
-      path: ~/.local/bin
-      state: directory
+      src: ../files/conf.d/
+      dest: ~/.config/fish/conf.d/
 
   - name: download and extract starship
     ansible.builtin.unarchive:

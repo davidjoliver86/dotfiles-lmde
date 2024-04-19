@@ -13,8 +13,7 @@
         - curl
         - gpg
         - apt-transport-https
-        - fish
-        - flatpak
+        - python-is-python3
 
   - name: make .ssh folder
     ansible.builtin.file:
@@ -26,3 +25,8 @@
       path: ~/.ssh/id_ed25519
       type: ed25519
       comment: "{{ ansible_facts['nodename'] }}"
+
+  - name: ensure ~/.local/bin exists
+    ansible.builtin.file:
+      path: ~/.local/bin
+      state: directory
