@@ -9,5 +9,6 @@
       cmd: fc-cache -rf
 
   - name: set hack as default monospace font
-    command:
-      cmd: gsettings set org.gnome.desktop.interface monospace-font-name "Hack 10"
+    community.general.dconf:
+      key: /org/gnome/desktop/interface/monospace-font-name
+      value: "'Hack 10'"
