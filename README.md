@@ -9,6 +9,5 @@ Ansible setup for LMDE 6.
 | Item | Value |
 | --- | --- |
 | Panel applets | Cinnamenu, Weather |
-| Terminal background | #111111 |
-| Terminal color scheme | GNOME |
+| Terminal colors | White on Black, background #111111, Tango color scheme |
 | Terminal command | /usr/bin/fish |

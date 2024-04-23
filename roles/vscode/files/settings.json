@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Hack",
+    "editor.fontFamily": "Cascadia Mono",
     "editor.fontSize": 13,
     "editor.formatOnSave": true,
     "editor.lineHeight": 16,
@@ -27,6 +27,7 @@
     "security.workspace.trust.enabled": false,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.fontFamily": "Cascadia Mono PL",
     "terminal.integrated.fontSize": 13,
     "typescript.surveys.enabled": false,
     "window.menuBarVisibility": "toggle",
