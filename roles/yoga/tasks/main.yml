@@ -1,0 +1,5 @@
+---
+  - name: install iio-sensor-proxy
+    become: true
+    apt:
+      name: iio-sensor-proxy

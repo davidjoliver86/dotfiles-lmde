@@ -1,0 +1,4 @@
+- name: setup lenovo yoga specific roles
+  hosts: localhost
+  roles:
+    - yoga
