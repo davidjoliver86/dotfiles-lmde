@@ -13,3 +13,4 @@ Ansible setup for LMDE 6.
 | Terminal command | /usr/bin/fish |
 
 Lenovo Yoga: enable screen flipping in Display -> Settings
+asdf
