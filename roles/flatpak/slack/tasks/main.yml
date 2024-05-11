@@ -1,6 +1,6 @@
 ---
-  - name: install slack flatpak
-    community.general.flatpak:
-      name: com.slack.Slack
-      state: present
-      method: user
+- name: install slack flatpak
+  community.general.flatpak:
+    name: com.slack.Slack
+    state: present
+    method: user

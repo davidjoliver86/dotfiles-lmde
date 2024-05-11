@@ -44,18 +44,18 @@
   user:
     name: "{{ username }}"
     groups: docker
-    append: yes
+    append: true
 
 - name: start docker service
   become: true
   ansible.builtin.service:
     name: docker
-    enabled: yes
+    enabled: true
     state: started
 
 - name: start containerd service
   become: true
   ansible.builtin.service:
     name: containerd
-    enabled: yes
+    enabled: true
     state: started

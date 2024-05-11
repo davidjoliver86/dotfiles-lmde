@@ -1,13 +1,13 @@
 ---
-  - name: install iio-sensor-proxy
-    become: true
-    apt:
-      name: iio-sensor-proxy
+- name: install iio-sensor-proxy
+  become: true
+  apt:
+    name: iio-sensor-proxy
 
-  - name: captive portal script
-    copy:
-      dest: ~/.local/bin/gateway
-      mode: 0700
-      content: |
-        #!/bin/bash
-        xdg-open http://$(ip -o route | grep default | awk '{print $3}')
+- name: captive portal script
+  copy:
+    dest: ~/.local/bin/gateway
+    mode: 0700
+    content: |
+      #!/bin/bash
+      xdg-open http://$(ip -o route | grep default | awk '{print $3}')

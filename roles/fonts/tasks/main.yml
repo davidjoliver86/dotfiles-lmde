@@ -1,14 +1,14 @@
 ---
-  - name: install cascadia fonts
-    become: true
-    apt:
-      deb: http://ftp.us.debian.org/debian/pool/main/f/fonts-cascadia-code/fonts-cascadia-code_2102.03-1_all.deb
+- name: install cascadia fonts
+  become: true
+  apt:
+    deb: http://ftp.us.debian.org/debian/pool/main/f/fonts-cascadia-code/fonts-cascadia-code_2102.03-1_all.deb
 
-  - name: update font cache
-    command:
-      cmd: fc-cache -rf
+- name: update font cache
+  command:
+    cmd: fc-cache -rf
 
-  - name: set cascadia mono as default monospace font
-    community.general.dconf:
-      key: /org/gnome/desktop/interface/monospace-font-name
-      value: "'Cascadia Mono PL 10'"
+- name: set cascadia mono as default monospace font
+  community.general.dconf:
+    key: /org/gnome/desktop/interface/monospace-font-name
+    value: "'Cascadia Mono PL 10.5'"

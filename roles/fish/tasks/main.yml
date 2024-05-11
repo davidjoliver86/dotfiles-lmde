@@ -1,22 +1,22 @@
 ---
-  - name: install fish
-    become: true
-    apt:
-      name: fish
+- name: install fish
+  become: true
+  apt:
+    name: fish
 
-  - name: install fish configs
-    copy:
-      src: ../files/conf.d/
-      dest: ~/.config/fish/conf.d/
+- name: install fish configs
+  copy:
+    src: ../files/conf.d/
+    dest: ~/.config/fish/conf.d/
 
-  - name: download and extract starship
-    ansible.builtin.unarchive:
-      remote_src: yes
-      src: https://github.com/starship/starship/releases/download/v1.18.2/starship-x86_64-unknown-linux-gnu.tar.gz
-      dest: ~/.local/bin
-      creates: ~/.local/bin/starship
+- name: download and extract starship
+  ansible.builtin.unarchive:
+    remote_src: true
+    src: https://github.com/starship/starship/releases/download/v1.18.2/starship-x86_64-unknown-linux-gnu.tar.gz
+    dest: ~/.local/bin
+    creates: ~/.local/bin/starship
 
-  - name: copy starship config
-    ansible.builtin.copy:
-      src: ../files/starship.toml
-      dest: ~/.config/starship.toml
+- name: copy starship config
+  ansible.builtin.copy:
+    src: ../files/starship.toml
+    dest: ~/.config/starship.toml

@@ -1,0 +1,22 @@
+---
+- name: remove unnecessary packages
+  become: true
+  apt:
+    name: "{{ packages }}"
+    state: absent
+    purge: true
+    autoremove: true
+  vars:
+    packages:
+      - thunderbird
+      - hypnotix
+      - hexchat
+
+- name: remove menu entries from cli apps
+  become: true
+  file:
+    path: /usr/share/applications/{{ item }}.desktop
+    state: absent
+  loop:
+    - fish
+    - htop

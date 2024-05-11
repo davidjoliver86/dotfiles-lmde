@@ -1,6 +1,8 @@
+---
 - name: setup base roles
   hosts: localhost
   roles:
     - base
     - fish
+    - git
     - pyenv

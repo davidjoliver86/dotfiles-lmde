@@ -1,11 +1,12 @@
+---
 - name: setup gui roles
   hosts: localhost
   roles:
     - fonts
-    - chrome
+    - brave
     - vscode
     - flatpak/base
     - flatpak/joplin
     - flatpak/slack
     - flatpak/zoom
-    - mint-debloat
+    - mint-cleanup

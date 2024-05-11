@@ -1,31 +1,38 @@
 ---
-  - name: install base packages
-    become: true
-    apt:
-      name: "{{ packages }}"
-      update_cache: true
-    vars:
-      packages:
-        - vim
-        - htop
-        - jq
-        - curl
-        - gpg
-        - apt-transport-https
-        - python-is-python3
+- name: install base packages
+  become: true
+  apt:
+    name: "{{ packages }}"
+    update_cache: true
+  vars:
+    packages:
+      - vim
+      - htop
+      - jq
+      - curl
+      - gpg
+      - apt-transport-https
+      - python-is-python3
+      - yamllint
 
-  - name: make .ssh folder
-    ansible.builtin.file:
-      path: ~/.ssh
-      state: directory
+- name: make .ssh folder
+  ansible.builtin.file:
+    path: ~/.ssh
+    state: directory
 
-  - name: create keypair
-    community.crypto.openssh_keypair:
-      path: ~/.ssh/id_ed25519
-      type: ed25519
-      comment: "{{ ansible_facts['nodename'] }}"
+- name: create keypair
+  community.crypto.openssh_keypair:
+    path: ~/.ssh/id_ed25519
+    type: ed25519
+    comment: "{{ ansible_facts['nodename'] }}"
 
-  - name: ensure ~/.local/bin exists
-    ansible.builtin.file:
-      path: ~/.local/bin
-      state: directory
+- name: create github signing keypair
+  community.crypto.openssh_keypair:
+    path: ~/.ssh/id_github_signing
+    type: ed25519
+    comment: "{{ ansible_facts['nodename'] }}"
+
+- name: ensure ~/.local/bin exists
+  ansible.builtin.file:
+    path: ~/.local/bin
+    state: directory
