@@ -10,4 +10,5 @@ username=$USER
 debian_codename=bookworm
 EOF
 fi
+yamllint . -s
 /usr/lib/virtualenvs/ansible/bin/ansible-playbook --ask-become-pass -i hosts $@

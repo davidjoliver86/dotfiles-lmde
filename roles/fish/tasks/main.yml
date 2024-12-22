@@ -1,13 +1,18 @@
 ---
 - name: install fish
   become: true
-  apt:
+  ansible.builtin.apt:
     name: fish
 
 - name: install fish configs
-  copy:
+  ansible.builtin.copy:
     src: ../files/conf.d/
     dest: ~/.config/fish/conf.d/
+
+- name: create completions folder
+  ansible.builtin.file:
+    path: ~/.config/fish/completions
+    state: directory
 
 - name: download and extract starship
   ansible.builtin.unarchive:
